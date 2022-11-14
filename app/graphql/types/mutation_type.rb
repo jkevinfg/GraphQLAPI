@@ -1,6 +1,8 @@
 module Types
   class MutationType < Types::BaseObject
     field :create_order, mutation: Mutations::CreateOrder
+    field :update_order, mutation: Mutations::UpdateOrder
+    field :delete_order, mutation: Mutations::DeleteOrder
   end
 end
 

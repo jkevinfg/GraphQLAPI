@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-    has_many :payments do
+    has_many :payments, dependent: :destroy do
         def successful
             where("status = ?", "Successful")
         end
