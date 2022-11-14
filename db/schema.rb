@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_13_201928) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_14_041118) do
   create_table "orders", force: :cascade do |t|
     t.string "description"
     t.float "total"
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_13_201928) do
     t.integer "order_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
     t.index ["order_id"], name: "index_payments_on_order_id"
   end
 
